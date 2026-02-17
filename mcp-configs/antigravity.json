@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "mysql-mcp": {
+      "name": "MySQL MCP",
+      "description": "MySQL database operations server. Connect to MySQL databases, execute queries, manage databases and tables.",
+      "command": "E:\\Projects\\OSP\\mysql mcp\\.venv\\Scripts\\python.exe",
+      "args": [
+        "-m",
+        "mysql_mcp.server"
+      ],
+      "cwd": "E:\\Projects\\OSP\\mysql mcp",
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}
