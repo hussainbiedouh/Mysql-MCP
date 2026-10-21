@@ -62,6 +62,7 @@ Choose the appropriate configuration file from `mcp-configs/`:
 
 | Client | Config File | Description |
 |--------|-------------|-------------|
+| OpenCode | `opencode.json` | OpenCode, nested under `mcp.servers` |
 | Claude Code | `claude-code.json` | Anthropic's Claude Code |
 | Cursor | `cursor.json` | Cursor IDE |
 | Generic MCP | `generic-mcp.json` | Any MCP-compatible client |
@@ -75,9 +76,9 @@ Choose the appropriate configuration file from `mcp-configs/`:
     "mysql-mcp": {
       "name": "MySQL MCP",
       "description": "MySQL database operations server",
-      "command": "E:\\Projects\\OSP\\mysql mcp\\.venv\\Scripts\\python.exe",
+      "command": "C:\\path\\to\\mysql-mcp\\.venv\\Scripts\\python.exe",
       "args": ["-m", "mysql_mcp.server"],
-      "cwd": "E:\\Projects\\OSP\\mysql mcp",
+      "cwd": "C:\\path\\to\\mysql-mcp",
       "env": {
         "PYTHONIOENCODING": "utf-8"
       }
@@ -85,6 +86,34 @@ Choose the appropriate configuration file from `mcp-configs/`:
   }
 }
 ```
+
+#### Example Configuration (OpenCode)
+
+OpenCode nests servers under `mcp.servers` in `~/.config/opencode/opencode.jsonc`:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "mysql-mcp": {
+        "type": "local",
+        "command": [
+          "C:\\path\\to\\mysql-mcp\\.venv\\Scripts\\python.exe",
+          "-m",
+          "mysql_mcp.server"
+        ],
+        "cwd": "C:\\path\\to\\mysql-mcp",
+        "environment": {
+          "PYTHONIOENCODING": "utf-8"
+        }
+      }
+    }
+  }
+}
+```
+
+Every client expects a different key, so the same file will not work across all of them. [mcp-client-config](https://github.com/hussainbiedouh/mcp-client-config) has the full table and what each failure mode looks like.
 
 ## Available Tools
 

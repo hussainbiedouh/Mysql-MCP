@@ -10,7 +10,7 @@
         "-m",
         "mysql_mcp.server"
       ],
-      "cwd": "E:\\Projects\\OSP\\mysql mcp",
+      "cwd": "C:\\path\\to\\mysql-mcp",
       "env": {
         "PYTHONIOENCODING": "utf-8"
       }

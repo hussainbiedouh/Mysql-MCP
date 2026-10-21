@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "mysql-mcp_uv": {
-      "command": "C:\\Users\\Hussain\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\uv.exe",
+      "command": "uv",
       "args": [
         "run",
         "--no-sync",
@@ -9,7 +9,7 @@
         "-m",
         "mysql_mcp.server"
       ],
-      "cwd": "E:\\Projects\\OSP\\mysql mcp",
+      "cwd": "C:\\path\\to\\mysql-mcp",
       "description": "MySQL database operations server using UV. Connect to MySQL databases, execute queries, manage databases and tables.",
       "env": {
         "PYTHONIOENCODING": "utf-8"

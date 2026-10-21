@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "mysql-mcp": {
+        "type": "local",
+        "command": [
+          "C:\\path\\to\\mysql-mcp\\.venv\\Scripts\\python.exe",
+          "-m",
+          "mysql_mcp.server"
+        ],
+        "cwd": "C:\\path\\to\\mysql-mcp",
+        "environment": {
+          "PYTHONIOENCODING": "utf-8"
+        }
+      }
+    }
+  }
+}
